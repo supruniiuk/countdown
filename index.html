@@ -6,10 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown</title>
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/countdown.css" />
   </head>
   <body>
-    <header class="countdown">
-      <p>Countdown</p>
+    <header class="header">
+      <p>Countdown to my birthday</p>
     </header>
+
+    <main class="countdown">
+      <div class="time">
+        <div class="counter">
+          <p date-time="days">23</p>
+        </div>
+        <div class="counter">
+          <p date-time="hours">02</p>
+        </div>
+        <div class="counter">
+          <p date-time="minutes">20</p>
+        </div>
+        <div class="counter">
+          <p date-time="seconds">02</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>

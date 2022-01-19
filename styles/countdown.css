@@ -1,0 +1,47 @@
+.time {
+  display: flex;
+  justify-content: center;
+}
+
+.counter {
+  position: relative;
+  display: flex;
+  width: 250px;
+  justify-content: center;
+}
+
+.counter p {
+  font-size: 100px;
+  color: var(--softRed);
+  position: relative;
+  top: calc(50% + 5px);
+}
+
+.counter:not(:last-child) {
+  margin-right: 100px;
+}
+
+.counter:before,
+.counter:after {
+  content: "";
+
+  width: 250px;
+  height: 125px;
+  border-radius: 10px;
+  box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  position: absolute;
+}
+
+.counter:before {
+  background: linear-gradient(0deg, var(--middleDarkBlue), var(--veryDarkBlue));
+}
+
+.counter:after {
+  background: linear-gradient(
+    0deg,
+    var(--darkDesaturatedBlue),
+    var(--middleDarkBlue)
+  );
+  top: 135px;
+}

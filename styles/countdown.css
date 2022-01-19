@@ -1,13 +1,32 @@
-.time {
+.time,
+.counter {
   display: flex;
   justify-content: center;
 }
 
-.counter {
+.counter,
+.interval-names li {
   position: relative;
-  display: flex;
   width: 250px;
+}
+
+.interval-names {
+  list-style-type: none;
+  width: 100%;
+  margin-top: 150px;
+
+  display: flex;
   justify-content: center;
+}
+
+.interval-names li {
+  text-align: center;
+  color: var(--grayishBlue);
+  font-family: Red Hat Text;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 5px;
 }
 
 .counter p {
@@ -17,7 +36,8 @@
   top: calc(50% + 5px);
 }
 
-.counter:not(:last-child) {
+.counter:not(:last-child),
+.interval-names li:not(:last-child) {
   margin-right: 100px;
 }
 

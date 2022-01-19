@@ -32,18 +32,28 @@ const getSecondsBetweenDates = () => {
 };
 
 setInterval(() => {
-  const seconds = getSecondsBetweenDates();
-  let time = convertFromSeconds(seconds);
+  if (
+    today.getMonth() == birthday.getMonth() &&
+    today.getDate() == birthday.getDate()
+  ) {
+    let intervalNames = document.getElementById("interval-names");
+    let timeElement = document.getElementById("time");
+    timeElement.innerHTML = "<p>Happy Birthday!</p>";
+    intervalNames.style.display = "none";
+  } else {
+    const seconds = getSecondsBetweenDates();
+    let time = convertFromSeconds(seconds);
 
-  time = time.map((item) => {
-    let elem = item.toString();
-    if (elem.length < 2) {
-      elem = "0" + elem;
+    time = time.map((item) => {
+      let elem = item.toString();
+      if (elem.length < 2) {
+        elem = "0" + elem;
+      }
+      return elem;
+    });
+
+    for (let i = 0; i < timeElements.length; i++) {
+      timeElements[i].textContent = time[i];
     }
-    return elem;
-  });
-
-  for (let i = 0; i < timeElements.length; i++) {
-    timeElements[i].textContent = time[i];
   }
 }, 1000);

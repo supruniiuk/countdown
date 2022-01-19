@@ -1,16 +1,16 @@
-.time,
+#time,
 .counter {
   display: flex;
   justify-content: center;
 }
 
 .counter,
-.interval-names li {
+#interval-names li {
   position: relative;
   width: 250px;
 }
 
-.interval-names {
+#interval-names {
   list-style-type: none;
   width: 100%;
   margin-top: 150px;
@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.interval-names li {
+#interval-names li {
   text-align: center;
   color: var(--grayishBlue);
   font-family: Red Hat Text;
@@ -29,7 +29,7 @@
   letter-spacing: 5px;
 }
 
-.counter p {
+.countdown p {
   font-size: 100px;
   color: var(--softRed);
   position: relative;
@@ -37,7 +37,7 @@
 }
 
 .counter:not(:last-child),
-.interval-names li:not(:last-child) {
+#interval-names li:not(:last-child) {
   margin-right: 100px;
 }
 

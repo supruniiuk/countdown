@@ -1,52 +1,55 @@
 #time,
-.counter {
+.counter,
+#interval-names {
   display: flex;
   justify-content: center;
+  max-width: 85%;
+  margin: 0 auto;
 }
 
 .counter,
 #interval-names li {
   position: relative;
-  width: 250px;
+  width: 20%;
 }
 
 #interval-names {
   list-style-type: none;
   width: 100%;
   margin-top: 150px;
-
-  display: flex;
-  justify-content: center;
+  font-size: 20px;
 }
 
 #interval-names li {
+  width: 100%;
   text-align: center;
   color: var(--grayishBlue);
   font-family: Red Hat Text;
   text-transform: uppercase;
-  font-size: 20px;
   font-weight: 600;
   letter-spacing: 5px;
 }
 
 .countdown p {
-  font-size: 100px;
+  font-size: 120px;
   color: var(--softRed);
   position: relative;
-  top: calc(50% + 5px);
+  top: calc(45% - 5px);
 }
 
 .counter:not(:last-child),
 #interval-names li:not(:last-child) {
-  margin-right: 100px;
+  margin-right: 5%;
 }
 
 .counter:before,
 .counter:after {
   content: "";
 
-  width: 250px;
-  height: 125px;
+  width: 100%;
+  max-width: 300px;
+  height: 130px;
+
   border-radius: 10px;
   box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.3);
   z-index: -1;
@@ -64,4 +67,94 @@
     var(--middleDarkBlue)
   );
   top: 135px;
+}
+
+@media screen and (max-width: 1200px) {
+  #time,
+  .counter,
+  #interval-names {
+    max-width: 95%;
+  }
+
+  .counter:not(:last-child),
+  #interval-names li:not(:last-child) {
+    margin-right: 3%;
+  }
+
+  .countdown p {
+    font-size: 100px;
+  }
+
+  .counter:before,
+  .counter:after {
+    height: 100px;
+  }
+
+  .counter:after {
+    top: 105px;
+  }
+
+  #interval-names {
+    margin-top: 110px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .counter:not(:last-child),
+  #interval-names li:not(:last-child) {
+    margin-right: 2%;
+  }
+
+  .countdown p {
+    font-size: 80px;
+  }
+
+  .counter:before,
+  .counter:after {
+    height: 80px;
+  }
+
+  .counter:after {
+    top: 85px;
+  }
+
+  #interval-names {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .countdown p {
+    font-size: 60px;
+  }
+
+  .counter:before,
+  .counter:after {
+    height: 60px;
+  }
+
+  .counter:after {
+    top: 65px;
+  }
+  #interval-names {
+    margin-top: 70px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .countdown p {
+    font-size: 60px;
+  }
+
+  .counter:before,
+  .counter:after {
+    height: 60px;
+  }
+
+  .counter:not(:last-child),
+  #interval-names li:not(:last-child) {
+    margin-right: 1%;
+  }
 }

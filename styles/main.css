@@ -21,18 +21,6 @@ body {
   height: 100vh;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-
-  height: 27%;
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
-  background: url(../images/pattern-hills.svg) no-repeat center;
-  background-size: 100%;
-}
-
 body::before {
   content: "";
   position: absolute;
@@ -60,6 +48,14 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+footer img {
+  position: absolute;
+
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
 }
 
 @media screen and (max-width: 960px) {

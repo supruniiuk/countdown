@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+main {
+  height: 40%;
+}
+
 .counter,
 #interval-names li {
   position: relative;
@@ -141,16 +145,29 @@
     margin-top: 70px;
     font-size: 13px;
   }
+
+  #interval-names li {
+    letter-spacing: 3px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .countdown p {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .counter:before,
   .counter:after {
-    height: 60px;
+    height: 40px;
+  }
+
+  .counter:after {
+    top: 45px;
+  }
+
+  #interval-names {
+    margin-top: 50px;
+    font-size: 7px;
   }
 
   .counter:not(:last-child),

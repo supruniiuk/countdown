@@ -23,7 +23,7 @@ body {
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
 
   height: 27%;
   width: 100%;

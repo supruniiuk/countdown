@@ -1,5 +1,6 @@
 const barsImg = document.getElementsByClassName("bars-img")[0];
 const dateInput = document.getElementsByClassName("date")[0];
+const okBtn = document.getElementsByClassName("btn")[0];
 
 function changeInputVisibility() {
   const style = window.getComputedStyle(dateInput, null);
@@ -11,5 +12,9 @@ function changeInputVisibility() {
 }
 
 barsImg.onclick = () => {
+  changeInputVisibility();
+};
+
+okBtn.onclick = () => {
   changeInputVisibility();
 };

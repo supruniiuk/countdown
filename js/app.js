@@ -1,5 +1,5 @@
 const today = new Date();
-const timeElements = document.querySelectorAll("[date-time]");
+const timeElements = document.querySelectorAll("[data-time]");
 
 const getFutureDate = (month, day) => {
   const thisYear = new Date(today.getFullYear(), month - 1, day);

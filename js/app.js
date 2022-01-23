@@ -23,6 +23,8 @@ okButton.onclick = () => {
   bdMonth = +birthdayInput.value.split("-")[1];
   bdDay = +birthdayInput.value.split("-")[2];
   birthday = getFutureDate(bdMonth, bdDay);
+
+  dateInput.style.visibility = "hidden";
 };
 
 const convertFromSeconds = (sec) => {

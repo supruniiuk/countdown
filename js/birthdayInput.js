@@ -15,6 +15,3 @@ barsImg.onclick = () => {
   changeInputVisibility();
 };
 
-okBtn.onclick = () => {
-  changeInputVisibility();
-};

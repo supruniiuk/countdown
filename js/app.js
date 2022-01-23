@@ -1,5 +1,10 @@
 const today = new Date();
+let bdMonth = 2;
+let bdDay = 23;
+
 const timeElements = document.querySelectorAll("[data-time]");
+const birthdayInput = document.getElementsByClassName("date__input")[0];
+const okButton = document.getElementsByClassName("btn")[0];
 
 const getFutureDate = (month, day) => {
   const thisYear = new Date(today.getFullYear(), month - 1, day);
@@ -12,7 +17,13 @@ const getFutureDate = (month, day) => {
   }
 };
 
-const birthday = getFutureDate(2, 23);
+let birthday = getFutureDate(bdMonth, bdDay);
+
+okButton.onclick = () => {
+  bdMonth = +birthdayInput.value.split("-")[1];
+  bdDay = +birthdayInput.value.split("-")[2];
+  birthday = getFutureDate(bdMonth, bdDay);
+};
 
 const convertFromSeconds = (sec) => {
   const days = Math.floor(sec / (3600 * 24));

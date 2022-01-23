@@ -1,7 +1,7 @@
 const barsImg = document.getElementsByClassName("bars-img")[0];
 const dateInput = document.getElementsByClassName("date")[0];
 
-function changeInputVisibility(value = "hidden") {
+function changeInputVisibility() {
   const style = window.getComputedStyle(dateInput, null);
   if (style.visibility == "hidden") {
     dateInput.style.visibility = "visible";
@@ -9,6 +9,7 @@ function changeInputVisibility(value = "hidden") {
     dateInput.style.visibility = "hidden";
   }
 }
+
 barsImg.onclick = () => {
   changeInputVisibility();
 };

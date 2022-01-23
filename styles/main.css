@@ -41,10 +41,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 main {
-  height: 50vh;
+  height: 40vh;
 }
 
 footer img {

@@ -69,6 +69,11 @@
   .date {
     height: 40px;
   }
+
+  .date__input,
+  .date .btn {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -84,5 +89,10 @@
 
   .date {
     height: 35px;
+  }
+
+  .date__input,
+  .date .btn {
+    font-size: 10px;
   }
 }

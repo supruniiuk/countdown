@@ -10,32 +10,38 @@
   </head>
   <body>
     <header class="header flex">
-      <p id="heading">Countdown to my birthday</p>
+      <p class="header__text">Countdown to my birthday</p>
     </header>
 
-    <main class="countdown">
-      <div>
-        <div id="time">
-          <div class="counter">
-            <p date-time="days">23</p>
+    <main>
+      <div class="countdown flex">
+        <div class="countdown-block">
+          <div class="count flex">
+            <p class="count__number" data-time="count__days">223</p>
           </div>
-          <div class="counter">
-            <p date-time="hours">02</p>
-          </div>
-          <div class="counter">
-            <p date-time="minutes">20</p>
-          </div>
-          <div class="counter">
-            <p date-time="seconds">02</p>
-          </div>
+          <p class="countdown__interval">days</p>
         </div>
 
-        <ul id="interval-names">
-          <li>days</li>
-          <li>hours</li>
-          <li>minutes</li>
-          <li>seconds</li>
-        </ul>
+        <div class="countdown-block">
+          <div class="count flex">
+            <p class="count__number" data-time="count__hours">02</p>
+          </div>
+          <p class="countdown__interval">hours</p>
+        </div>
+
+        <div class="countdown-block">
+          <div class="count flex">
+            <p class="count__number" data-time="count__minutes">20</p>
+          </div>
+          <p class="countdown__interval">minutes</p>
+        </div>
+
+        <div class="countdown-block">
+          <div class="count flex">
+            <p class="count__number" data-time="count__seconds">02</p>
+          </div>
+          <p class="countdown__interval">seconds</p>
+        </div>
       </div>
     </main>
 
